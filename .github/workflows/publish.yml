@@ -2,6 +2,11 @@ name: Publish to Roblox
 
 on:
   workflow_dispatch:        # manual "Run workflow" button
+    inputs:
+      version:
+        description: "Version to publish (e.g. 1.2.0)"
+        required: true
+        type: string
   push:
     tags: ["v*"]            # or push a tag like v1.0.0
 
@@ -16,6 +21,23 @@ jobs:
     environment: production   # add required reviewers here for extra safety
     steps:
       - uses: actions/checkout@v5
+
+      - name: Set version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            VERSION="${GITHUB_REF_NAME#v}"
+          else
+            VERSION="$INPUT_VERSION"
+          fi
+          if ! printf '%s' "$VERSION" | grep -Eq '^[0-9A-Za-z._+-]+$'; then
+            echo "::error::Invalid or missing version: '$VERSION'"
+            exit 1
+          fi
+          printf 'const Version: string = `%s`\n\nreturn Version\n' "$VERSION" > src/shared/Version.luau
+          echo "Publishing version $VERSION"
+          cat src/shared/Version.luau
 
       - name: Install Rokit
         run: |

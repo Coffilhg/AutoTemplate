@@ -9,6 +9,10 @@ Built with Rojo, published with Roblox Open Cloud via GitHub Actions. No Studio 
 3. GitHub repo → Settings → Environments → create `production`.
    - Secret: `ROBLOX_API_KEY`
    - Variables: `ROBLOX_UNIVERSE_ID`, `ROBLOX_PLACE_ID`
+   ```luau
+   print(`ROBLOX_UNIVERSE_ID`, game.GameId)
+   print(`ROBLOX_PLACE_ID`, game.PlaceId)
+   ```
 4. Change `Coffilhg` in [`.github/workflows/publish.yml`](<.github/workflows/publish.yml#L14>) if the repo lives elsewhere.
 
 ## Publish
