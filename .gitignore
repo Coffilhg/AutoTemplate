@@ -1,0 +1,7 @@
+*.rbxl
+*.rbxlx
+sourcemap.json
+wally.lock
+sourcemap.json
+*Packages/
+Reference

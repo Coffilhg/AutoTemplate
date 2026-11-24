@@ -1,0 +1,37 @@
+[package]
+name = "coffilhg/autotemplate"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "dev"
+
+[place]
+shared-packages = "game.ReplicatedStorage.Packages"
+
+[dependencies]
+Arrangement = "coffilhg/arrangement@2.0.0"
+CameraController = "coffilhg/cameracontroller@1.0.2"
+ClassNameTypePairs = "coffilhg/classnametypepairs@739.0.7390687"
+ClassNameTypePairsClientInGameCreatable = "coffilhg/classnametypepairsclientingamecreatable@744.0.7441077"
+ClassNameTypePairsClientInGameCreatableExtended = "coffilhg/classnametypepairsclientingamecreatableextended@745.0.7451137"
+CoffeeObjects = "coffilhg/coffeeobjects@2.4.0"
+CoffeeParser = "coffilhg/coffeeparser@1.0.5"
+CoffeeRemotesClient = "coffilhg/coffeeremotes-client@1.0.2"
+Counter = "coffilhg/counter@1.0.1"
+CreateInstance = "coffilhg/createinstance@0.2.0"
+CreateInstanceCoffee = "coffilhg/createinstancecoffee@0.2.0"
+CreateInstanceReaction = "coffilhg/createinstancereaction@0.2.0"
+EasySmoothDamp = "coffilhg/easysmoothdamp@1.0.4"
+FirstPersonDetector = "coffilhg/firstpersondetector@1.0.0"
+FirstPersonView = "coffilhg/firstpersonview@1.0.0"
+GreatUIButton = "coffilhg/greatuibutton@0.0.1"
+GreatUIDrag = "coffilhg/greatuidrag@3.0.0"
+GUICompatibility = "coffilhg/guicompatibility@1.0.0"
+HumanoidCameraOffsetController = "coffilhg/humanoidcameraoffsetcontroller@1.0.1"
+LemonSignal = "data-oriented-house/lemonsignal@2.0.0"
+NamespaceSync = "coffilhg/namespacesync@0.0.1"
+Reaction = "coffilhg/reaction@1.1.1"
+RichGradient = "coffilhg/richgradient@0.0.0"
+
+[server-dependencies]
+CoffeeRemotesServer = "coffilhg/coffeeremotes-server@1.0.2"
+ProfileStoreV2 = "coffilhg/profilestorev2@2.0.3"
